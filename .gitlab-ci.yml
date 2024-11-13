@@ -1,12 +1,13 @@
 stages:
   - test
 
-pytest:
+test:
   stage: test
   image: python:3.13-alpine
   script:
-    - pip install --no-cache-dir pytest  # Installe Pytest
-    - pytest                             # Exécute les tests
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+    - echo "Running Test"
+    - hatch shell
+    - hatch test
 
-
-# modif for commit 3
+# modif for commit 4

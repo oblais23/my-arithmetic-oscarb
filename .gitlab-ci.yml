@@ -32,4 +32,4 @@ show_coverage:
   stage: show_coverage
   script:
     - echo "Uploading Code Coverage Report"
-  coverage: '/TOTAL\s+\d+\s+\d+\s+(\d+)%/'
+  coverage: '/TOTAL.*? (100(?:\.0+)?\%\|[1-9]?\d(?:\.\d+)?\%)$/'

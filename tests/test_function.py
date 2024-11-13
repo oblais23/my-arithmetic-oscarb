@@ -12,3 +12,6 @@ class TestFunctions(TestCase):
 
     def test_invalid_pgcd(self):
         self.assertNotEqual(0, pgcd(40902, 24140))
+
+    def test_fail(self):
+        self.assertEqual(1, 2)

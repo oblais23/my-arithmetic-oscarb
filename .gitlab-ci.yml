@@ -3,10 +3,10 @@ stages:
 
 pytest:
   stage: test
-  image: python:3.14-alpine
+  image: python:3.13-alpine
   script:
     - pip install --no-cache-dir pytest  # Installe Pytest
     - pytest                             # Exécute les tests
 
 
-# modif for commit 2
+# modif for commit 3

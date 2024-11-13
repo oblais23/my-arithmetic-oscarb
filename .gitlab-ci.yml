@@ -7,9 +7,7 @@ test:
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
     - echo "Running Test"
-    - sudo apk add gcc python3-dev musl-dev linux-headers
+    - apk add gcc python3-dev musl-dev linux-headers
     - pip install hatch
     - hatch shell
     - hatch test
-
-# modif for commit 7

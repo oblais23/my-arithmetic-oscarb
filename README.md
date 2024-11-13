@@ -22,4 +22,5 @@ pip install my-arithmetic-oscarb
 
 ## Codecov
 
-![Test Coverage](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/badges/main/coverage.svg)
+
+[![coverage report](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/badges/main/coverage.svg)](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/-/commits/main)

@@ -1,6 +1,7 @@
 stages:
   - test
   - coverage
+  -
 
 test:
   stage: test
@@ -20,4 +21,15 @@ coverage:
   script:
     - echo "Collecting Code Coverage"
     - pip install pytest-cov
-    - pytest --cov=src tests/
+    - pytest --cov=src --cov-report=lcov tests/
+    - cat coverage.lcov
+  artifacts:
+    paths:
+      - coverage.lcov
+    expire_in: 1 hour
+
+coverage_report:
+  stage: coverage
+  script:
+    - echo "Uploading Code Coverage Report"
+  coverage: '/TOTAL\s+\d+\s+\d+\s+(\d+)%/'

@@ -20,7 +20,8 @@ pip install my-arithmetic-oscarb
 
 `my-arithmetic-oscarb` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
 
-## Codecov
+## Badges
 
+[![pipeline status](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/badges/main/pipeline.svg)](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/-/commits/main)
 
 [![coverage report](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/badges/main/coverage.svg)](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/-/commits/main)

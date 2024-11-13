@@ -1,13 +1,29 @@
 stages:
   - test
+  - coverage  # Nouvelle étape pour la couverture
 
+# Étape des tests
 test:
   stage: test
-  image: python:3.13-alpine
+  image: python:3.14-alpine
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
     - echo "Running Test"
+    # Installer les dépendances nécessaires
     - apk add gcc python3-dev musl-dev linux-headers
-    - pip install hatch
-    - hatch shell
-    - hatch test
+    - pip install pytest coverage  # Installer pytest et coverage
+    # Exécuter les tests avec coverage
+    - coverage run -m pytest
+    # Générer un rapport de couverture dans la console
+    - coverage report
+
+# Étape de couverture
+coverage:
+  stage: coverage
+  image: python:3.14-alpine
+  script:
+    - echo "Collecting Code Coverage"
+    # Installer Codecov pour envoyer les résultats à Codecov (tu peux aussi utiliser Coveralls si tu préfères)
+    - pip install codecov
+    # Envoyer les résultats à Codecov
+    - codecov

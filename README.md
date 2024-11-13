@@ -22,4 +22,4 @@ pip install my-arithmetic-oscarb
 
 ## Codecov
 
-![Codecov](https://codecov.io/gh/mon-utilisateur/mon-projet/branch/main/graph/badge.svg)
+![Test Coverage](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/badges/main/coverage.svg)

@@ -1,6 +1,7 @@
 stages:
   - test
   - coverage
+  - show_coverage
 
 test:
   stage: test
@@ -27,8 +28,8 @@ coverage:
       - coverage.lcov
     expire_in: 1 hour
 
-coverage_report:
-  stage: coverage
+show_coverage:
+  stage: show_coverage
   script:
     - echo "Uploading Code Coverage Report"
   coverage: '/TOTAL\s+\d+\s+\d+\s+(\d+)%/'

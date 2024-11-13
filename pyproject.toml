@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "my-arithmetic-oscarb"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Oscar Blais", email = "oscar.blais@etudiant.univ-lr.fr" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/Oscar Blais/my-arithmetic-oscarb#readme"
+Issues = "https://github.com/Oscar Blais/my-arithmetic-oscarb/issues"
+Source = "https://github.com/Oscar Blais/my-arithmetic-oscarb"
+
+[tool.hatch.version]
+path = "src/my_arithmetic_oscarb/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/my_arithmetic_oscarb tests}"
+
+[tool.coverage.run]
+source_pkgs = ["my_arithmetic_oscarb", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/my_arithmetic_oscarb/__about__.py",
+]
+
+[tool.coverage.paths]
+my_arithmetic_oscarb = ["src/my_arithmetic_oscarb", "*/my-arithmetic-oscarb/src/my_arithmetic_oscarb"]
+tests = ["tests", "*/my-arithmetic-oscarb/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

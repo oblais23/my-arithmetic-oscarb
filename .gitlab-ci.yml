@@ -21,7 +21,7 @@ coverage:
   script:
     - echo "Collecting Code Coverage"
     - pip install pytest-cov
-    - pytest --cov=src --cov-report=lcov tests/
+    - pytest --cov=src.my_arithmetic_oscarb.function --cov-report=lcov tests/
     - cat coverage.lcov
   artifacts:
     paths:
@@ -32,5 +32,4 @@ show_coverage:
   stage: show_coverage
   script:
     - echo "Uploading Code Coverage Report"
-      - grep -oP 'TOTAL.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$' coverage.lcov
   coverage: '/TOTAL.*? (100(?:\.0+)?\%\|[1-9]?\d(?:\.\d+)?\%)$/'

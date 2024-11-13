@@ -16,10 +16,8 @@ test:
 # Étape de couverture
 coverage:
   stage: coverage
-  image: python:3.14-alpine
+  image: python:3.13-alpine
   script:
     - echo "Collecting Code Coverage"
-    # Installer Codecov pour envoyer les résultats à Codecov (tu peux aussi utiliser Coveralls si tu préfères)
     - pip install codecov
-    # Envoyer les résultats à Codecov
     - codecov

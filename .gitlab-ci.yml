@@ -7,7 +7,8 @@ test:
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
     - echo "Running Test"
+    - pip install -r hatch
     - hatch shell
     - hatch test
 
-# modif for commit 4
+# modif for commit 5

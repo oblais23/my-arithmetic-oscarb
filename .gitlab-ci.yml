@@ -1,0 +1,9 @@
+stages:
+  - test
+
+pytest:
+  stage: test
+  image: python:3.14-alpine
+  script:
+    - pip install --no-cache-dir pytest  # Installe Pytest
+    - pytest                             # Exécute les tests

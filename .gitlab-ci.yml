@@ -1,5 +1,6 @@
 stages:
   - test
+  - coverage
 
 test:
   stage: test
@@ -8,9 +9,17 @@ test:
     - echo "Hello, $GITLAB_USER_LOGIN!"
     - echo "Running Test"
     - apk add gcc python3-dev musl-dev linux-headers
-    - pip install hatch pytest-cov
+    - pip install hatch
     - hatch shell
     - hatch test
+
+# Étape de couverture
+coverage:
+  stage: coverage
+  image: python:3.13-alpine
+  script:
+    - echo "Collecting Code Coverage"
+    - pip install pytest-cov
     - pytest --cov=src.my_arithmetic_oscarb.function --cov-report=xml --cov-report=term-missing
   artifacts:
     expire_in: 1 hour

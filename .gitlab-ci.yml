@@ -19,5 +19,5 @@ coverage:
   image: python:3.13-alpine
   script:
     - echo "Collecting Code Coverage"
-    - pip install codecov
-    - codecov
+    - pip install pytest-cov
+    - pytest --cov=src tests/

@@ -7,3 +7,6 @@ pytest:
   script:
     - pip install --no-cache-dir pytest  # Installe Pytest
     - pytest                             # Exécute les tests
+
+
+# modif for commit

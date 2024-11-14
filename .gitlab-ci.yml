@@ -31,17 +31,34 @@ coverage:
         path: coverage.xml
   coverage: '/TOTAL.*? (\d+%)$/'
 
-# Étape de déploiement
-deploy:
+# Étape de déploiement (tag)
+deploy-tag:
   stage: deploy
   script:
     - apk add git
     - pip install hatch hatch-vcs
     - hatch build
+    - echo "my-arithmetic-oscarb deployment on stable servers"
     - echo "Contenu du dossier dist :"
     - ls dist/
   only:
     - tags
+  artifacts:
+    paths:
+      - dist/*.whl
+
+# Étape de déploiement (develop)
+deploy-develop:
+  stage: deploy
+  script:
+    - if [ "$CI_COMMIT_REF_NAME" = "develop" ]; then
+      apk add git
+      pip install hatch hatch-vcs
+      hatch build
+      echo "my-arithmetic-oscarb deployment on develop servers"
+      echo "Contenu du dossier dist :"
+      ls dist/
+      fi
   artifacts:
     paths:
       - dist/*.whl

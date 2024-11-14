@@ -1,14 +1,13 @@
 stages:
   - test
   - coverage
-#  - deploy
+  - deploy
 
 image: python:3.13-alpine
 
 # Étape de test
 test:
   stage: test
-  image: python:3.13-alpine
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
     - echo "Running Test"
@@ -20,7 +19,6 @@ test:
 # Étape de couverture
 coverage:
   stage: coverage
-  image: python:3.13-alpine
   script:
     - echo "Collecting Code Coverage"
     - pip install pytest-cov
@@ -34,9 +32,10 @@ coverage:
   coverage: '/TOTAL.*? (\d+%)$/'
 
 # Étape de déploiement
-#deploy:
-#  stage: deploy
-#  image: python:3.13-alpine
-#  script:
-#    - echo "Deploying to Production"
-#    - pip install hatch hatch-vcs
+deploy:
+  stage: deploy
+  script:
+    - pip install hatch hatch-vcs
+    - hatch build
+    - echo "Contenu du dossier dist :"
+    - ls dist/

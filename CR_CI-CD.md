@@ -103,3 +103,5 @@ coverage:
 
 J'ai également testé d'ajouter une deuxieme fonction à mon projet pour voir si la couverture de code se mettait à jour automatiquement. Le test a été concluant.
 
+**Badge coverage non complet:**
+![Badge coverage non complet](source_md/coverage_low.svg)

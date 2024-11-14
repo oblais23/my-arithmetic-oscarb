@@ -45,8 +45,6 @@ check = "mypy --install-types --non-interactive {args:src/my_arithmetic_oscarb t
 [tool.hatch.build.hooks.vcs]
 version-file = "_version.py"
 
-[tool.hatch.metadata.hooks.vcs]
-
 [tool.coverage.run]
 source_pkgs = ["my_arithmetic_oscarb", "tests"]
 branch = true

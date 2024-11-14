@@ -253,3 +253,8 @@ deploy-develop:
     paths:
       - dist/*.whl
 ```
+
+## Exercice 5 : Mirroir GitLab et GitHub
+
+L'opération de mirroring entre GitLab et GitHub a été effectuée avec succès.
+Le projet est maintenant disponible sur GitHub à l'adresse suivante : [Repo my-arithmetic-oscarb sur GitHub](https://github.com/oblais23/my-arithmetic-oscarb/tree/develop)

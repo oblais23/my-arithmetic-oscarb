@@ -51,14 +51,14 @@ deploy-tag:
 deploy-develop:
   stage: deploy
   script:
-    - if [ "$CI_COMMIT_REF_NAME" = "develop" ]; then
-        apk add git
-        pip install hatch hatch-vcs
-        hatch build
-        echo "my-arithmetic-oscarb deployment on develop servers"
-        echo "Contenu du dossier dist :"
-        ls dist/
-      fi
+    - apk add git
+    - pip install hatch hatch-vcs
+    - hatch build
+    - echo "my-arithmetic-oscarb deployment on stable servers"
+    - echo "Contenu du dossier dist :"
+    - ls dist/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
   artifacts:
     paths:
       - dist/*.whl

@@ -1,7 +1,11 @@
 stages:
   - test
   - coverage
+#  - deploy
 
+image: python:3.13-alpine
+
+# Étape de test
 test:
   stage: test
   image: python:3.13-alpine
@@ -28,3 +32,11 @@ coverage:
         coverage_format: cobertura
         path: coverage.xml
   coverage: '/TOTAL.*? (\d+%)$/'
+
+# Étape de déploiement
+#deploy:
+#  stage: deploy
+#  image: python:3.13-alpine
+#  script:
+#    - echo "Deploying to Production"
+#    - pip install hatch hatch-vcs

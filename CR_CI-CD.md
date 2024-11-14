@@ -1,4 +1,4 @@
-# Compte Rendu TP CI/CD
+# Compte Rendu TP CI/CD - Oscar B
 
 ## Exercice 1 : Configuration de l'environnement local
 

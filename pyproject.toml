@@ -31,6 +31,12 @@ Documentation = "https://github.com/Oscar Blais/my-arithmetic-oscarb#readme"
 Issues = "https://github.com/Oscar Blais/my-arithmetic-oscarb/issues"
 Source = "https://github.com/Oscar Blais/my-arithmetic-oscarb"
 
+[tool.hatch]
+version = "standard"
+
+[tool.hatch.build.targets.sdist]
+versions = ["hatch-vcs"]
+
 [tool.hatch.version]
 path = "src/my_arithmetic_oscarb/__about__.py"
 # source = "vcs"

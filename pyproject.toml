@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "my-arithmetic-oscarb"
 dynamic = ["version"]
-description = ""
+description = ''
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
@@ -32,7 +32,7 @@ Issues = "https://github.com/Oscar Blais/my-arithmetic-oscarb/issues"
 Source = "https://github.com/Oscar Blais/my-arithmetic-oscarb"
 
 [tool.hatch.version]
-source = "hatch_vcs"  # Utiliser hatch-vcs pour gérer la version avec les tags Git
+path = "src/my_arithmetic_oscarb/__about__.py"
 
 [tool.hatch.envs.types]
 extra-dependencies = [

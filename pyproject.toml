@@ -34,6 +34,10 @@ Source = "https://github.com/Oscar Blais/my-arithmetic-oscarb"
 [tool.hatch.version]
 source = "vcs"
 
+[tool.hatch.version.raw-options]
+version_scheme = "no-guess-dev"
+local_scheme = "no-local-version"
+
 [tool.hatch.metadata.hooks.vcs]
 version = "tag"
 

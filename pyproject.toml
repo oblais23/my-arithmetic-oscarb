@@ -33,7 +33,6 @@ Source = "https://github.com/Oscar Blais/my-arithmetic-oscarb"
 
 [tool.hatch.version]
 path = "src/my_arithmetic_oscarb/__about__.py"
-source = "vcs"
 
 [tool.hatch.envs.types]
 extra-dependencies = [

@@ -11,8 +11,7 @@ test:
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
     - echo "Running Test"
-    - apk add gcc python3-dev musl-dev linux-headers
-    - pip install --upgrade pip setuptools hatchling git
+    - apk add gcc python3-dev musl-dev linux-headers git
     - pip install hatch
     - hatch shell
     - hatch test

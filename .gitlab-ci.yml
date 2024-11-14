@@ -35,9 +35,13 @@ coverage:
 deploy:
   stage: deploy
   script:
+    - apk add git
     - pip install hatch hatch-vcs
     - hatch build
     - echo "Contenu du dossier dist :"
     - ls dist/
   only:
     - tags
+  artifacts:
+    paths:
+      - dist/*.whl

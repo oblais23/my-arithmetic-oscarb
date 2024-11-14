@@ -38,8 +38,7 @@ version = "standard"
 versions = ["hatch-vcs"]
 
 [tool.hatch.version]
-path = "src/my_arithmetic_oscarb/__about__.py"
-# source = "vcs"
+source = "vcs"
 
 [tool.hatch.envs.types]
 extra-dependencies = [

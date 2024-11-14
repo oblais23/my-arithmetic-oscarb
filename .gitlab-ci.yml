@@ -39,3 +39,5 @@ deploy:
     - hatch build
     - echo "Contenu du dossier dist :"
     - ls dist/
+  only:
+    - tags

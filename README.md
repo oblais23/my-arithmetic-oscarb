@@ -24,3 +24,4 @@ pip install my-arithmetic-oscarb
 
 [![pipeline status](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/badges/main/pipeline.svg)](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/-/commits/main)
 [![coverage report](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/badges/main/coverage.svg)](https://gitlab.univ-lr.fr/oblais/my-arithmetic-oscarb/-/commits/main)
+

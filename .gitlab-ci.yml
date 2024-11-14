@@ -12,7 +12,7 @@ test:
     - echo "Hello, $GITLAB_USER_LOGIN!"
     - echo "Running Test"
     - apk add gcc python3-dev musl-dev linux-headers
-    - pip install --upgrade pip setuptools hatchling
+    - pip install --upgrade pip setuptools hatchling git
     - pip install hatch
     - hatch shell
     - hatch test
